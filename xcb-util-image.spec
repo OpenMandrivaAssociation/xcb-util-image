@@ -60,7 +60,7 @@ Requires:	xcb-util-image-devel = %{version}-%{release}
 Conflicts:	%{mklibname xcb-util -d} < 0.3.9
 Conflicts:	%{mklibname xcb-util -d -s} < 0.3.9
 
-%description -n %{develname}
+%description -n %{develnamest}
 This pakcage includes the development files required to build software against
 %{name}.
 
