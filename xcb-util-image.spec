@@ -89,3 +89,15 @@ rm -rf %{buildroot}
 
 %files -n %{develnamest}
 %{_libdir}/libxcb-image.a
+
+
+%changelog
+* Mon Jun 04 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.3.9-1
++ Revision: 802326
+- description fix
+- version update 0.3.9
+
+* Wed Oct 26 2011 Tomasz Pawel Gajc <tpg@mandriva.org> 0.3.8-1
++ Revision: 707429
+- import xcb-util-image
+
