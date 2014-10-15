@@ -5,13 +5,13 @@
 
 Summary:	xcb-util's xcb-image
 Name:		xcb-util-image
-Version:	0.3.9
-Release:	9
+Version:	0.4.0
+Release:	1
 Url:		http://xcb.freedesktop.org
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
 License:	MIT
 Group:		System/X11
-BuildRequires:	xcb-util-devel >= 0.3.9
+BuildRequires:	xcb-util-devel >= %{version}
 BuildRequires:	x11-util-macros
 
 %description
@@ -69,12 +69,11 @@ This pakcage includes the development files required to build software against
 %setup -q
 
 %build
-%configure2_5x \
+%configure \
 	--enable-static
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
 %files -n %{libname}
