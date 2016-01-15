@@ -6,7 +6,7 @@
 Summary:	xcb-util's xcb-image
 Name:		xcb-util-image
 Version:	0.4.0
-Release:	3
+Release:	4
 Url:		http://xcb.freedesktop.org
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
 License:	MIT
@@ -70,7 +70,9 @@ This pakcage includes the development files required to build software against
 
 %build
 %configure \
-	--enable-static
+	--enable-static \
+	--with-pic
+
 %make
 
 %install
@@ -89,4 +91,3 @@ This pakcage includes the development files required to build software against
 
 %files -n %{develnamest}
 %{_libdir}/libxcb-image.a
-
