@@ -3,10 +3,12 @@
 %define develname %mklibname %{name} -d
 %define develnamest %mklibname %{name} -d -s
 
+%global optflags %{optflags} -O3
+
 Summary:	xcb-util's xcb-image
 Name:		xcb-util-image
 Version:	0.4.0
-Release:	6
+Release:	7
 Url:		http://xcb.freedesktop.org
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
 License:	MIT
@@ -66,17 +68,17 @@ This pakcage includes the development files required to build software against
 
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure \
 	--enable-static \
 	--with-pic
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files -n %{libname}
 %{_libdir}/libxcb-image.so.%{major}*
