@@ -7,14 +7,14 @@
 
 Summary:	xcb-util's xcb-image
 Name:		xcb-util-image
-Version:	0.4.0
-Release:	7
+Version:	0.4.1
+Release:	1
 Url:		http://xcb.freedesktop.org
-Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.bz2
+Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.xz
 License:	MIT
 Group:		System/X11
-BuildRequires:	xcb-util-devel >= %{version}
-BuildRequires:	x11-util-macros
+BuildRequires:	pkgconfig(xcb-util)
+BuildRequires:	pkgconfig(xorg-macros)
 
 %description
 The xcb-util module provides a number of libraries which sit on top of
@@ -84,7 +84,7 @@ This pakcage includes the development files required to build software against
 %{_libdir}/libxcb-image.so.%{major}*
 
 %files -n %{develname}
-%doc ChangeLog NEWS README
+%doc ChangeLog NEWS README.md
 %{_includedir}/xcb/xcb_image.h
 %{_includedir}/xcb/xcb_pixel.h
 %{_includedir}/xcb/xcb_bitops.h
