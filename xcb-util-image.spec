@@ -9,7 +9,7 @@ Summary:	xcb-util's xcb-image
 Name:		xcb-util-image
 Version:	0.4.1
 Release:	2
-Url:		http://xcb.freedesktop.org
+Url:		https://xcb.freedesktop.org
 Source0:	http://xcb.freedesktop.org/dist/%{name}-%{version}.tar.xz
 License:	MIT
 Group:		System/X11
